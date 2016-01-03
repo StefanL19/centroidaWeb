@@ -1,0 +1,32 @@
+
+
+<template name="ApplicationLayout">
+<head>
+  <title>minstant</title>
+</head>
+{{>yield "header"}}
+{{>yield "main"}}
+</template>
+
+
+
+<template name="products">
+<div class="container">
+	<div class="row">
+		{{#each product}}
+		<div class="col-md-3">
+			{{name}}
+		</div>
+		<div class="col-md-3">
+			<img src="/{{img}}" class="css-crop-product" />
+		</div>
+		{{/each}}
+	</div>
+</div>
+</template>
+
+
+<template name="loginAdmin">
+{{>loginButtons}}
+<a href="/login/blogadmin"><button class="btn btn-success">Go to admin</button></a>
+</template>

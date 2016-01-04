@@ -21,8 +21,11 @@ insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 accounts-ui
 accounts-password
-houston:admin
 iron:router
 ryw:blog
 alanning:roles
 mrt:accounts-admin-ui-bootstrap-3
+dburles:collection-helpers
+aldeed:collection2
+fortawesome:fontawesome
+yogiben:admin

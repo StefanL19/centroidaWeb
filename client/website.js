@@ -12,3 +12,15 @@ Template.products.helpers({
 
     }
 });
+
+
+Template.aboutus.helpers({
+
+default:function(){
+	var photo = Photos.findOne({title: "default"});
+	return photo;
+}
+
+});
+
+

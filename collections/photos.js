@@ -13,7 +13,14 @@ Photos.allow({
 PhotoSchema = new SimpleSchema({
       title: {
         type: String
+      },
+      src: {
+        type: String
+      },
+      alt: {
+        type: String
       }
+
 
 });
 Photos.attachSchema(PhotoSchema);

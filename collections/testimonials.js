@@ -14,7 +14,7 @@ Testimonials.allow({
 TestimonialSchema = new SimpleSchema({
       title: {
         type: String
-      }
+      },
 
 });
 Testimonials.attachSchema(TestimonialSchema);

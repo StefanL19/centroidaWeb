@@ -41,4 +41,15 @@ if (Products.find().count() == 0) {
 
 }
 
+    if (Photos.find().count() == 0) {
+        Photos.insert({
+            title: "default",
+            src:"aboutDefault.jpg",
+            alt:"some default image for about"
+        });
+    }
+
+
+
+
 });

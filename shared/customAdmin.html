@@ -1,0 +1,22 @@
+
+<!-- this is a test template for the admin package  -->
+<template name="postWYSIGEditor">
+
+{{#autoForm collection="Photos" id="postWYSIGEditor" type="method" meteormethod="addPhoto"}}
+  <fieldset>
+    
+    <legend>Photos</legend>
+    {{>afQuickField name='title' value="Write the title here..."}}
+    {{>afQuickField name='src' rows=2 value="Write the src here..."}}
+    {{>afQuickField name='alt' rows=2 value="Write the alt here..."}}
+  </fieldset>
+  <button type="submit" class="btn btn-primary">Insert</button>
+
+  {{/autoForm}}
+
+
+</template>
+
+
+
+<!-- this is the template for editing the testimonials -->

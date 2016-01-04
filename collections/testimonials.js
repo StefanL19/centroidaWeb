@@ -1,5 +1,5 @@
-Products = new Mongo.Collection('products');
-Products.allow({
+Testimonials = new Mongo.Collection('testimonials');
+Testimonials.allow({
   insert: function(){
     return true;
   },
@@ -11,9 +11,10 @@ Products.allow({
   }
 });
 
-ProductSchema = new SimpleSchema({
+TestimonialSchema = new SimpleSchema({
       title: {
         type: String
       }
+
 });
-Products.attachSchema(ProductSchema);
+Testimonials.attachSchema(TestimonialSchema);

@@ -1,3 +1,7 @@
+//subscriptions
+Meteor.subscribe("photos");
+Meteor.subscribe("testimonials");
+Meteor.subscribe("products");
 
 
 Template.products.helpers({
@@ -8,5 +12,3 @@ Template.products.helpers({
 
     }
 });
-
-

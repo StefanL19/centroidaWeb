@@ -1,5 +1,5 @@
-Products = new Mongo.Collection('products');
-Products.allow({
+Photos = new Mongo.Collection('photos');
+Photos.allow({
   insert: function(){
     return true;
   },
@@ -10,10 +10,10 @@ Products.allow({
     return true;
   }
 });
-
-ProductSchema = new SimpleSchema({
+PhotoSchema = new SimpleSchema({
       title: {
         type: String
       }
+
 });
-Products.attachSchema(ProductSchema);
+Photos.attachSchema(PhotoSchema);

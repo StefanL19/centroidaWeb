@@ -1,0 +1,14 @@
+<template name="products">
+    <div class="container">
+        <div class="row">
+            {{#each product}}
+                <div class="col-md-3">
+                    {{name}}
+                </div>
+                <div class="col-md-3">
+                    <img src="/{{img}}" class="css-crop-product" />
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

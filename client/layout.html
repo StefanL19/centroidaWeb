@@ -1,32 +1,15 @@
-
-
 <template name="ApplicationLayout">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="bg">
   <title>minstant</title>
 </head>
+<body>
 {{>yield "header"}}
 {{>yield "main"}}
+
+</body>
 </template>
 
 
 
-<template name="products">
-<div class="container">
-	<div class="row">
-		{{#each product}}
-		<div class="col-md-3">
-			{{name}}
-		</div>
-		<div class="col-md-3">
-			<img src="/{{img}}" class="css-crop-product" />
-		</div>
-		{{/each}}
-	</div>
-</div>
-</template>
-
-
-<template name="loginAdmin">
-{{>loginButtons}}
-<a href="/login/blogadmin"><button class="btn btn-success">Go to admin</button></a>
-</template>

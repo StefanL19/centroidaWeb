@@ -10,31 +10,40 @@ if(Meteor.users.find().count() == 0) {
  Roles.addUsersToRoles(id, ['admin']);
 }
 if (Products.find().count() == 0) {
+    var object = {};
     Products.insert({
-        name : "Fustuchen Tahan",
+        title : "Fustuchen Tahan",
         img: "image1.png",
-        price: 10
+        price: 10,
+        content: "TBD",
+        value: object
 
     });
 
     Products.insert({
-        name : "Leshnikov Tahan",
+        title : "Leshnikov Tahan",
         img: "image1.png",
-        price: 10
+        price: 10,
+        content: "TBD",
+        value: object
 
     });
 
     Products.insert({
-        name : "Susamov Tahan",
+        title : "Susamov Tahan",
         img: "image1.png",
-        price: 10
+        price: 10,
+        content: "TBD",
+        value: object
 
     });
 
     Products.insert({
-        name : "BIO Med",
+        title : "BIO Med",
         img: "image1.png",
-        price: 10
+        price: 10,
+        content: "TBD",
+        value: object
 
     });
 
@@ -47,25 +56,6 @@ if (Products.find().count() == 0) {
             src:"aboutDefault.jpg",
             alt:"some default image for about"
         });
-    }
-
-
-    if (Testimonials.find().count() == 0) {
-
-        Testimonials.insert({
-
-            title: "Article_About_Us",
-            text: "something"
-
-        });
-
-
-        Testimonials.insert({
-
-            title: "Article_Products",
-            text: "something"
-        });
-
     }
 
 });

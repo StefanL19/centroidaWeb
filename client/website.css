@@ -15,7 +15,15 @@
 
 .at-input{
 	width: 200px;
+	margin-left: auto;
+    margin-right: auto;
 }
 .at-btn{
 	width: 200px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.at-signup-link{
+	text-align: center;
+	/*margin-left:42.5%;*/
 }

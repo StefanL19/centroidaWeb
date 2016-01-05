@@ -14,6 +14,19 @@ Products.allow({
 ProductSchema = new SimpleSchema({
       title: {
         type: String
+      },
+      price:{
+        type: String
+      },
+      content:{
+        type: String
+      },
+      value:{
+        type: Object
+      },
+      img:{
+        type: String
       }
+
 });
 Products.attachSchema(ProductSchema);

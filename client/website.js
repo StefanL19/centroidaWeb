@@ -11,12 +11,6 @@ Template.products.helpers({
         return Products.find({});
 
     },
-
-    description: function(){
-    	var filter = "Article_Products";
-    	var object = Testimonials.findOne({title: filter});
-    	return object;
-    }
 });
 
 
@@ -27,12 +21,15 @@ default:function(){
 	return photo;
 },
 
-about:function(){
-	var filter = "Article_About_Us";
-	var object = Testimonials.findOne({title: filter});
-	return object;
-}
+});
 
+
+Template.singleProduct.helpers({
+    product:function(){
+        var currentId = Session.get('prodId');
+        var product = Products.findOne({_id:currentId});
+        return product;
+    }
 });
 
 

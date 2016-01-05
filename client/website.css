@@ -12,3 +12,10 @@
 .css-product-image:hover{
 	opacity: 0.5;
 }
+
+.at-input{
+	width: 200px;
+}
+.at-btn{
+	width: 200px;
+}

@@ -50,6 +50,22 @@ if (Products.find().count() == 0) {
     }
 
 
+    if (Testimonials.find().count() == 0) {
 
+        Testimonials.insert({
+
+            title: "Article_About_Us",
+            text: "something"
+
+        });
+
+
+        Testimonials.insert({
+
+            title: "Article_Products",
+            text: "something"
+        });
+
+    }
 
 });

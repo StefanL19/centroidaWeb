@@ -16,5 +16,9 @@ TestimonialSchema = new SimpleSchema({
         type: String
       },
 
+      text: {
+        type: String
+      }
+
 });
 Testimonials.attachSchema(TestimonialSchema);

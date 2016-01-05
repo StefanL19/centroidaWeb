@@ -24,6 +24,9 @@ ryw:blog
 alanning:roles
 mrt:accounts-admin-ui-bootstrap-3
 dburles:collection-helpers
-aldeed:collection2
 fortawesome:fontawesome
 yogiben:admin
+aldeed:collection2
+useraccounts:bootstrap
+useraccounts:core
+useraccounts:iron-routing

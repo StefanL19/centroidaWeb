@@ -10,7 +10,7 @@ Photos.allow({
     return true;
   }
 });
-PhotoSchema = new SimpleSchema({
+Schemas.Photos = new SimpleSchema({
       title: {
         type: String
       },
@@ -23,4 +23,4 @@ PhotoSchema = new SimpleSchema({
 
 
 });
-Photos.attachSchema(PhotoSchema);
+Photos.attachSchema(Schemas.Photos);

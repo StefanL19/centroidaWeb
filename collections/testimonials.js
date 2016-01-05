@@ -11,7 +11,7 @@ Testimonials.allow({
   }
 });
 
-TestimonialSchema = new SimpleSchema({
+Schemas.Testimonials = new SimpleSchema({
       title: {
         type: String
       },
@@ -21,4 +21,4 @@ TestimonialSchema = new SimpleSchema({
       }
 
 });
-Testimonials.attachSchema(TestimonialSchema);
+Testimonials.attachSchema(Schemas.Testimonials);

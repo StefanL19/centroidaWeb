@@ -11,7 +11,7 @@ Products.allow({
   }
 });
 
-ProductSchema = new SimpleSchema({
+Schemas.Products = new SimpleSchema({
       title: {
         type: String
       },
@@ -29,4 +29,4 @@ ProductSchema = new SimpleSchema({
       }
 
 });
-Products.attachSchema(ProductSchema);
+Products.attachSchema(Schemas.Products);

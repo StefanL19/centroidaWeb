@@ -1,7 +1,3 @@
-Meteor.publish("photos", function(argument){
-	return Photos.find({});
-});
-
 
 Meteor.publish("recipes", function(argument){
 	return Recipes.find({});

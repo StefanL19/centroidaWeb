@@ -14,6 +14,7 @@ Template.singleProduct.helpers({
     product:function(){
         var currentId = Session.get('prodId');
         var product = Products.findOne({_id:currentId});
+        Session.set('productName', product.title);
         return product;
     }
 });
@@ -27,8 +28,25 @@ Template.singleProduct.events({
     },
 
     'submit .js-add-order':function(event){
-        var m = event.target.name;
-        console.log(m);
+        var email = event.target.email.value;
+        var name = event.target.name.value;
+        var family_name = event.target.family_name.value;
+        var adress = event.target.adress.value;
+        var quantity = event.target.quantity.value;
+        var productName = Session.get('productName');
+        var email_text = "Име: "+name +" "+family_name + "\r\n" + "Адрес: " + adress+ "\r\n" +
+                          "Поръчка: " + quantity + "\r\n" + "Стока: " + productName + "\r\n" + "Email: " + email;
+        var mailSubject = "Поръчка";
+        console.log(email_text);
+
+
+        Meteor.call('sendEmail',
+            'testemail',
+            'website',
+          mailSubject,
+            email_text);
+
+        return false;
     }
 
 });

@@ -1,5 +1,5 @@
-Testimonials = new Mongo.Collection('testimonials');
-Testimonials.allow({
+Recipes = new Mongo.Collection('recipes');
+Recipes.allow({
   insert: function(){
     return true;
   },
@@ -11,7 +11,7 @@ Testimonials.allow({
   }
 });
 
-Schemas.Testimonials = new SimpleSchema({
+Schemas.Recipes = new SimpleSchema({
       title: {
         type: String
       },
@@ -21,4 +21,4 @@ Schemas.Testimonials = new SimpleSchema({
       }
 
 });
-Testimonials.attachSchema(Schemas.Testimonials);
+Recipes.attachSchema(Schemas.Recipes);

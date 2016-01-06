@@ -3,8 +3,8 @@ Meteor.publish("photos", function(argument){
 });
 
 
-Meteor.publish("testimonials", function(argument){
-	return Testimonials.find({});
+Meteor.publish("recipes", function(argument){
+	return Recipes.find({});
 });
 
 

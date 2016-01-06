@@ -1,0 +1,17 @@
+<template name="products">
+
+     <div class="container" id="products">
+        <center><h2>Продукти: </h2></center>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                {{#each product}}
+                    <div class="col-md-6 col-xs-6 css-product-image">
+                    <a href="/products/{{_id}}"><img src="/{{img}}" class="css-crop-product" /></a>
+                    </div>
+                {{/each}}
+            </div>
+        </div><!-- / row -->
+    </div><!-- / container -->
+
+</template>

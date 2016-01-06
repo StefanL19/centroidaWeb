@@ -32,4 +32,18 @@ Template.singleProduct.helpers({
     }
 });
 
+Template.singleProduct.events({
+
+    'click .modal_activate':function(event){
+        console.log("clicked modal activate");
+        $("#productOrder").modal('show');
+    },
+
+    'submit .js-add-order':function(event){
+        var m = event.target.name;
+        console.log(m);
+    }
+
+});
+
 

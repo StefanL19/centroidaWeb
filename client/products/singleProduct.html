@@ -1,11 +1,55 @@
 <template name="singleProduct">
-
-<div class="col-md-4 css-image-product">
-{{product.title}}
-</div>
-
-<div class="col-md-8 css-description-product">
+<div class="container">
+<div class="row">
+<div class="col-md-6 css-image-product">
 <img src="/{{product.img}}"/>
 </div>
+
+<div class="col-md-6 css-description-product">
+{{product.content}}
+</div>
+</div>
+<br/>
+<button class="btn btn-success modal_activate">Поръчай {{product.title}}: </button>
+</div>
+
+
+
+<!-- modal for orders -->
+<div class="modal fade" id="productOrder">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+            </div><!-- / modal-title-->
+          </div><!-- / modal-header -->
+          <form class="js-add-order">
+              <div class="modal-body">
+	                <div class="emailArea">
+	                	E-mail: <input type="text" name="email"/>
+	                </div>
+	                <div class="nameArea">
+	                	Име: <input type="text" name="name"/>
+	                </div>
+	                <div class="adressArea">
+	                	Адрес: <input type="text" name="adress"/>
+	                </div>
+	                <div class="quntityArea">
+	                	Количество: <input type="text" name="quantity"/>
+	                </div>             
+                </div><!-- / modal-body -->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" id="orderButton">Поръчай</button>
+                  <button class="btn btn-warning" data-dismiss="modal">
+                    Затвори
+                  </button>
+                </div><!-- / modal-footer -->
+                </form> 
+        </div><!-- / modal-content -->
+      </div><!-- / modal-dialog -->
+  </div><!-- /  modal for orders-->
+
+
+
 
 </template>

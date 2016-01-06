@@ -12,7 +12,7 @@ if(Meteor.users.find().count() == 0) {
 if (Products.find().count() == 0) {
     var object = {};
     Products.insert({
-        title : "Fustuchen Tahan",
+        title : "Фъстъчен тахан",
         img: "image1.png",
         price: 10,
         content: "TBD",
@@ -21,7 +21,7 @@ if (Products.find().count() == 0) {
     });
 
     Products.insert({
-        title : "Leshnikov Tahan",
+        title : "Лешников тахан",
         img: "image1.png",
         price: 10,
         content: "TBD",
@@ -30,7 +30,7 @@ if (Products.find().count() == 0) {
     });
 
     Products.insert({
-        title : "Susamov Tahan",
+        title : "Сусамов тахан",
         img: "image1.png",
         price: 10,
         content: "TBD",
@@ -39,7 +39,7 @@ if (Products.find().count() == 0) {
     });
 
     Products.insert({
-        title : "BIO Med",
+        title : "Български БИО мед",
         img: "image1.png",
         price: 10,
         content: "TBD",

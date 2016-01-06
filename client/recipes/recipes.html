@@ -1,2 +1,18 @@
 <template name="recipes">
+  <div class="container" id="recipes">
+     <center><h2>Рецепти: </h2></center>
+     <hr/>
+     <div class="row">
+         <div class="col-md-12 col-xs-12">
+           <div class="row">
+             {{#each recipes}}
+                 <div class="col-md-6 col-xs-6">
+                   <a href="/recipes/{{_id}}">{{title}}</a>
+                 </div>
+             {{/each}}
+           </div>
+         </div>
+     </div><!-- / row -->
+ </div><!-- / container -->
+
 </template>

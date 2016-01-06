@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 /* primary color: C5860B */
-
+/* products */
 .css-crop-product{
 	max-width: 100%;
 	height: 200px;
@@ -31,7 +31,7 @@
 	/*margin-left:42.5%;*/
 }
 
-
+/* misc */
 
 
 h1, h2, h3 ,h4 ,h5 , p {
@@ -50,4 +50,13 @@ h1, h2, h3 ,h4 ,h5 , p {
 .navbar-brand > .img-logo {
 	height: 50px;
 	width: auto;
+}
+
+
+/* landing page */
+
+.landing-image {
+	display: block;
+	margin: 0 auto;
+	
 }

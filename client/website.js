@@ -1,26 +1,12 @@
 //subscriptions
-Meteor.subscribe("photos");
-Meteor.subscribe("testimonials");
+Meteor.subscribe("recipes");
 Meteor.subscribe("products");
 
-
+//PRODDUCTS
 Template.products.helpers({
-
     product: function () {
-
         return Products.find({});
-
     },
-});
-
-
-Template.aboutus.helpers({
-
-default:function(){
-	var photo = Photos.findOne({title: "default"});
-	return photo;
-},
-
 });
 
 
@@ -31,6 +17,7 @@ Template.singleProduct.helpers({
         return product;
     }
 });
+
 
 Template.singleProduct.events({
 
@@ -47,3 +34,19 @@ Template.singleProduct.events({
 });
 
 
+//RECIPES
+Template.recipes.helpers({
+    recipes: function () {
+        return Recipes.find({});
+    },
+});
+
+
+
+Template.singleRecipe.helpers({
+    recipe:function(){
+        var currentId = Session.get('recId');
+        var recipe = Recipes.findOne({_id:currentId});
+        return recipe;
+    }
+});

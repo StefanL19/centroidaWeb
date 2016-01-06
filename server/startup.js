@@ -50,6 +50,21 @@ if (Products.find().count() == 0) {
 
 }
 
+if (Recipes.find().count() == 0) {
+  Recipes.insert({
+    title: "Таханова торта",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet magna eusapien dignissim luctus. Cras eget venenatis elit. Maecenas ullamcorper in risus et consectetur.z"
+  }),
+  Recipes.insert({
+    title: "Соларни сладки",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet magna eusapien dignissim luctus. Cras eget venenatis elit. Maecenas ullamcorper in risus et consectetur.z"
+  }),
+  Recipes.insert({
+    title: "Назобани бухтички",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet magna eusapien dignissim luctus. Cras eget venenatis elit. Maecenas ullamcorper in risus et consectetur.z"
+  })
+
+}
 
 
 });

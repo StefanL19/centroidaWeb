@@ -1,3 +1,49 @@
 <template name="contact">
-<h2> Свържете се с нас </h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <center><h2> Свържете се с нас </h2></center>
+
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Име:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Вашите имена" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Ел. Поща</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message" class="col-sm-2 control-label">Съобщение</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="4" name="message"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="human" name="human" placeholder="Отговорете тук!">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <input id="submit" name="submit" type="submit" value="Прати" class="btn btn-primary">
+                </div>
+            </div>
+            {{#if alert}}
+              <div class="form-group">
+                  <div class="col-sm-10 col-sm-offset-2">
+                      {{ alert}}
+                  </div>
+              </div>
+            {{/if}}
+        </form>
+      </div>
+    </div>
+  </div>
+
 </template>

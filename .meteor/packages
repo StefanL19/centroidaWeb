@@ -31,3 +31,4 @@ useraccounts:bootstrap
 useraccounts:core
 useraccounts:iron-routing
 email
+percolate:velocityjs

@@ -30,21 +30,21 @@ Template.singleProduct.events({
     'submit .js-add-order':function(event){
         var email = event.target.email.value;
         var name = event.target.name.value;
-        var family_name = event.target.family_name.value;
+        var familyName = event.target.family_name.value;
         var adress = event.target.adress.value;
         var quantity = event.target.quantity.value;
         var productName = Session.get('productName');
-        var email_text = "Име: "+name +" "+family_name + "\r\n" + "Адрес: " + adress+ "\r\n" +
+        var emailText = "Име: "+name +" "+familyName + "\r\n" + "Адрес: " + adress+ "\r\n" +
                           "Поръчка: " + quantity + "\r\n" + "Стока: " + productName + "\r\n" + "Email: " + email;
         var mailSubject = "Поръчка";
-        console.log(email_text);
+        console.log(emailText);
 
 
         Meteor.call('sendEmail',
             'testemail',
             'website',
           mailSubject,
-            email_text);
+            emailText);
 
         return false;
     }
@@ -68,3 +68,47 @@ Template.singleRecipe.helpers({
         return recipe;
     }
 });
+
+//CONTACT
+Template.contact.helpers({
+   alerts: function() {
+     return Session.get('contactErrors');
+   }
+})
+Template.contact.events({
+   'submit .js-send-message': function(event) {
+       event.preventDefault();
+
+       if(validateContactMail()) {
+         var mailSubject = 'Съобщение от ' + event.target.email;
+         var emailText = "Съобщение от " + event.target.name + ", с ел.поща -" + event.target.email + ": " + event.target.message ;
+         Meteor.call('sendEmail' , 'testmail' , 'website' , mailSubject , emailText );
+         Session.set('contactErrors', '');
+       }
+
+       function validateContactMail() {
+         var errors = new Array();
+        //  var emailRegex = /\S+@\S+\.\S+/;
+        //  if(!emailRegex.test()) {
+        //     errors.push('Невалидна електронна поща!');
+        //     Session.set('contactErrors', errors);
+        //     return false;
+        //  }
+
+         if(event.target.message.value.length < 50 ) {
+           errors.push('Съобщението Ви трябва да съдържа поне 50 символа!');
+           Session.set('contactErrors', errors);
+           return false;
+         }
+
+         if(event.target.human.value != 5) {
+           errors.push('Неправилна калкулация!');
+           Session.set('contactErrors', errors);
+           return false;
+         }
+
+         return true;
+       }
+     }
+
+})

@@ -4,23 +4,23 @@
       <div class="col-md-12">
         <center><h2> Свържете се с нас </h2></center>
 
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal js-send-message" role="form">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Име:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Вашите имена" value="">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Вашите имена" value="" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Ел. Поща</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="message" class="col-sm-2 control-label">Съобщение</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" name="message"></textarea>
+                    <textarea class="form-control" rows="4" id="message" name="message" required></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -34,14 +34,10 @@
                     <input id="submit" name="submit" type="submit" value="Прати" class="btn btn-primary">
                 </div>
             </div>
-            {{#if alert}}
-              <div class="form-group">
-                  <div class="col-sm-10 col-sm-offset-2">
-                      {{ alert}}
-                  </div>
-              </div>
-            {{/if}}
         </form>
+        {{#if alerts}}
+            <div class="alert alert-danger">{{alerts}}</div>
+        {{/if}}
       </div>
     </div>
   </div>

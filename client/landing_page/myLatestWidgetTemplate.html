@@ -1,0 +1,38 @@
+<template name="myLatestWidgetTemplate">
+<div class="container">
+  <div class="meteor-blog-latest">
+    <div class="meteor-blog-latest-heading">
+    	<center><span class="label label-info">Latest Posts</span></center>
+    	<hr/>
+    </div>
+    <ul class="meteor-blog-latest-posts">
+      {{#each latest}}
+        <li class="meteor-blog-latest-post">
+        <div class="row">
+        {{#if featuredImage}}
+          <div class="col-md-1">
+          <img src="/{{featuredImageName}}" class="feat" />
+          </div><!-- / col-md-6 -->
+          {{/if}}
+          <a href="{{blogPathFor 'blogShow'}}">
+          <div class="col-md-11">
+            <div class="meteor-blog-latest-post-title">
+              <h3>{{{title}}}</h3>
+            </div>
+            <div class="meteor-blog-latest-post-date">
+              <time datetime="{{publishedAt}}">{{date publishedAt}}</time>
+            </div>
+          </div>
+          </a>
+
+          </div><!-- / row -->
+        </li>
+        <hr/>
+      {{else}}
+        <li>Loading...</li>
+      {{/each}}
+    </ul>
+    <a href="{{blogPathFor 'blogIndex'}}">View all posts&nbsp; &rsaquo;</a>
+  </div>
+  </div>
+</template>

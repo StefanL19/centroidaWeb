@@ -56,9 +56,7 @@ h1, h2, h3 ,h4 ,h5 , p {
 /* landing page */
 
 .landing-image {
-	display: block;
-	margin: 0 auto;
-
+	width: 100%;
 }
 
 /* sticky footer */
@@ -80,4 +78,59 @@ body {
 
 .white-temp {
 	color: white;
+}
+
+.navbar-nav{
+	
+}
+
+.meteor-blog-latest-heading{
+	font-family: 'Exo 2', sans-serif;
+	font-size: 40px !important;
+}
+ul, li{
+    list-style:none;
+    list-style-type:none;
+}
+
+.feat{
+	width: 80px;
+	height: 80px;
+}
+
+.navbar-nav>li>a:hover {
+    border-bottom: 2px solid #ad1f2d!important;
+    text-decoration: none; 
+}
+
+.css-logo-image:hover{
+	opacity:0.8;
+}
+
+
+.meteor_head {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.imageMeteor {
+    position: relative;
+    z-index: 0;
+}
+.meteor_heading {
+    color: white;
+    font-size: 100px !important;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.mainarea {
+    padding-top: 0 !important;
+}
+.odd{
+	position: absolute;
+	visibility: hidden;
+	z-index: -10;
 }

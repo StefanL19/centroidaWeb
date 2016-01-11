@@ -54,8 +54,9 @@ Template.singleProduct.events({
 
 //RECIPES
 Template.recipes.helpers({
-    recipes: function () {
-        return Recipes.find({});
+    current_theme: function () {
+      console.log(Blog.Post.find({tags:"meteor"}));
+        return Blog.Post.find({tags:"meteor"});
     },
 });
 
@@ -77,6 +78,7 @@ Template.contact.helpers({
 })
 Template.contact.events({
    'submit .js-send-message': function(event) {
+      console.log(Blog.posts.find({}));
        event.preventDefault();
 
        if(validateContactMail()) {

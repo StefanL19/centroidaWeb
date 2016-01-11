@@ -7,3 +7,4 @@ Meteor.publish("recipes", function(argument){
 Meteor.publish("products", function(argument){
 	return Products.find({});
 });
+

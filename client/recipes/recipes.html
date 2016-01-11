@@ -1,18 +1,16 @@
 <template name="recipes">
   <div class="container" id="recipes">
-     <center><h2>Рецепти: </h2></center>
+     <center><h2>Meteor: </h2></center>
      <hr/>
+     {{#each current_theme}}
      <div class="row">
-         <div class="col-md-12 col-xs-12">
-           <div class="row">
-             {{#each recipes}}
-                 <div class="col-md-6 col-xs-6">
-                   <a href="/recipes/{{_id}}">{{title}}</a>
-                 </div>
-             {{/each}}
-           </div>
-         </div>
-     </div><!-- / row -->
+        <a href="/recipes/{{_id}}"><h2>{{title}}</h2></a>
+       </div>
+     {{/each}}
+     <div class="odd">
+     {{> blogIndex}}
+     </div>
+
  </div><!-- / container -->
 
 </template>

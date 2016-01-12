@@ -117,26 +117,108 @@ Template.contact.events({
 
 Template.jumbotron.events({
 
-  'mouseleave .css-logo-image':function(event){
+  //METEOR LOGO EVENTS
+  /////////////////
+  ////////////
+  'mouseleave .js-logo-meteor':function(event){
     event.preventDefault();
     event.stopPropagation();
-    $(".meteor_head").velocity({
-      translateY: "-25px"
+    console.log($( window ).width() > 900);
+    if ($( window ).width() > 900) {
+      $(".meteor_tutorial").velocity({
+      translateY: "-10px"
+    });
+     $('.meteor_tutorial').velocity({
+    /* Two-item array format. */
+    translateX: "-15px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
     });
     //$.Velocity.hook($(".meteor_head"), "translateY", "-25px");
+    }
+    else{
+      return;
+    }
   },
 
-  'mouseenter .css-logo-image':function(event){
+  'mouseenter .js-logo-meteor':function(event){
     event.preventDefault();
     event.stopPropagation();
     //$.Velocity.hook($(".meteor_head"), "translateY", "25px");
-    console.log("translate out");
-    $('.meteor_head').velocity({
+    if ($( window ).width() > 900) {
+      $('.meteor_tutorial').velocity({
     /* Two-item array format. */
     translateY: "25px"
     /* Three-item array format with a per-property easing. */
     //opacity: [ 0, "easeInSine", 1 ]
-});
+    });
+    $('.meteor_tutorial').velocity({
+    /* Two-item array format. */
+    translateX: "50px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
+    });
+    }
+    else{
+      return;
+    }
     return false;
   },
+  ////////////////////////////
+  ///////////////////////
+  ///////////////////
+  //MATHEMATICS LOGO EVENTS
+  ///////////////////////
+  //////////////////
+  ////////////
+
+  'mouseenter .js-logo-math':function(event){
+
+    event.preventDefault();
+    event.stopPropagation();
+    //$.Velocity.hook($(".meteor_head"), "translateY", "25px");
+    if ($( window ).width() > 900) {
+      $('.math_tutorial').velocity({
+    /* Two-item array format. */
+    translateY: "25px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
+    });
+    $('.math_tutorial').velocity({
+    /* Two-item array format. */
+    translateX: "50px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
+    });
+    }
+    else{
+      return;
+    }
+    return false;
+
+  },
+
+
+  'mouseleave .js-logo-math':function(event){
+
+    event.preventDefault();
+    event.stopPropagation();
+    console.log($( window ).width() > 900);
+    if ($( window ).width() > 900) {
+      $(".math_tutorial").velocity({
+      translateY: "-10px"
+    });
+     $('.math_tutorial').velocity({
+    /* Two-item array format. */
+    translateX: "-15px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
+    });
+    //$.Velocity.hook($(".meteor_head"), "translateY", "-25px");
+    }
+    else{
+      return;
+    }
+
+  }
 })

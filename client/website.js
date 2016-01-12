@@ -114,3 +114,29 @@ Template.contact.events({
      }
 
 })
+
+Template.jumbotron.events({
+
+  'mouseleave .css-logo-image':function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    $(".meteor_head").velocity({
+      translateY: "-25px"
+    });
+    //$.Velocity.hook($(".meteor_head"), "translateY", "-25px");
+  },
+
+  'mouseenter .css-logo-image':function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    //$.Velocity.hook($(".meteor_head"), "translateY", "25px");
+    console.log("translate out");
+    $('.meteor_head').velocity({
+    /* Two-item array format. */
+    translateY: "25px"
+    /* Three-item array format with a per-property easing. */
+    //opacity: [ 0, "easeInSine", 1 ]
+});
+    return false;
+  },
+})

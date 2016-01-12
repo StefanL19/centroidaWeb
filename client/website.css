@@ -118,7 +118,7 @@ ul, li{
     z-index: 0;
 }
 .meteor_heading {
-    color: white;
+    color: #33FF33;
     font-size: 100px !important;
     font-family: 'Exo 2', sans-serif;
     text-align: center;
@@ -130,7 +130,6 @@ h3 {
     padding-top: 0 !important;
 }
 .odd{
-	position: absolute;
 	visibility: hidden;
 	z-index: -10;
 }

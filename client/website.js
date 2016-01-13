@@ -33,8 +33,8 @@ Template.contact.events({
        event.preventDefault();
 
        if(validateContactMail()) {
-         var mailSubject = 'Съобщение от ' + event.target.email;
-         var emailText = "Съобщение от " + event.target.name + ", с ел.поща -" + event.target.email + ": " + event.target.message ;
+         var mailSubject = 'Message from ' + event.target.email;
+         var emailText = "Message from " + event.target.name + ", with email -" + event.target.email + ": " + event.target.message ;
          Meteor.call('sendEmail' , 'testmail' , 'website' , mailSubject , emailText );
          Session.set('contactErrors', '');
        }
@@ -49,13 +49,13 @@ Template.contact.events({
         //  }
 
          if(event.target.message.value.length < 50 ) {
-           errors.push('Съобщението Ви трябва да съдържа поне 50 символа!');
+           errors.push('Your message should be at least 50 symbols!');
            Session.set('contactErrors', errors);
            return false;
          }
 
          if(event.target.human.value != 5) {
-           errors.push('Неправилна калкулация!');
+           errors.push('Bad calculation!');
            Session.set('contactErrors', errors);
            return false;
          }
@@ -185,3 +185,4 @@ Template.education.helpers({
   }
 
 });
+

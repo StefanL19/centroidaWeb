@@ -123,18 +123,21 @@ Template.jumbotron.events({
   'mouseleave .js-logo-meteor':function(event){
     event.preventDefault();
     event.stopPropagation();
+
     console.log($( window ).width() > 900);
     if ($( window ).width() > 900) {
+
+
+
       $(".meteor_tutorial").velocity({
-      translateY: "-10px"
+      translateY: "0px"
     });
-     $('.meteor_tutorial').velocity({
-    /* Two-item array format. */
-    translateX: "-15px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
-    });
-    //$.Velocity.hook($(".meteor_head"), "translateY", "-25px");
+
+
+    $(".lineMeteor").velocity({ opacity: 0 } , { duration: 1000 });//velocity line meteor
+    $(".js-sub-meteor").velocity({ opacity: 1 });
+
+
     }
     else{
       return;
@@ -144,20 +147,20 @@ Template.jumbotron.events({
   'mouseenter .js-logo-meteor':function(event){
     event.preventDefault();
     event.stopPropagation();
-    //$.Velocity.hook($(".meteor_head"), "translateY", "25px");
+
     if ($( window ).width() > 900) {
       $('.meteor_tutorial').velocity({
-    /* Two-item array format. */
-    translateY: "25px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
+
+    translateY: "180px"
+
     });
-    $('.meteor_tutorial').velocity({
-    /* Two-item array format. */
-    translateX: "50px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
-    });
+
+
+
+       $(".lineMeteor").velocity({ opacity: 1 }, { duration: 1000 });//velocity line meteor
+       $(".js-sub-meteor").velocity({ opacity: 0 });
+
+
     }
     else{
       return;
@@ -176,20 +179,14 @@ Template.jumbotron.events({
 
     event.preventDefault();
     event.stopPropagation();
-    //$.Velocity.hook($(".meteor_head"), "translateY", "25px");
+
     if ($( window ).width() > 900) {
+
       $('.math_tutorial').velocity({
-    /* Two-item array format. */
-    translateY: "25px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
+    translateY: "180px"
     });
-    $('.math_tutorial').velocity({
-    /* Two-item array format. */
-    translateX: "50px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
-    });
+
+      $(".lineMath").velocity({ opacity: 1 }, { duration: 1000 });//velocity line mathematics
     }
     else{
       return;
@@ -203,22 +200,23 @@ Template.jumbotron.events({
 
     event.preventDefault();
     event.stopPropagation();
+
     console.log($( window ).width() > 900);
+
     if ($( window ).width() > 900) {
+
       $(".math_tutorial").velocity({
-      translateY: "-10px"
+
+      translateY: "0px"
+
     });
-     $('.math_tutorial').velocity({
-    /* Two-item array format. */
-    translateX: "-15px"
-    /* Three-item array format with a per-property easing. */
-    //opacity: [ 0, "easeInSine", 1 ]
-    });
-    //$.Velocity.hook($(".meteor_head"), "translateY", "-25px");
+       $(".lineMath").velocity({ opacity: 0 }, { duration: 1000 });//velocity line mathematics
+
     }
     else{
       return;
     }
 
   }
+
 })

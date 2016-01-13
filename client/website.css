@@ -133,3 +133,30 @@ h3 {
 	visibility: hidden;
 	z-index: -10;
 }
+.lineMeteor{
+	opacity: 0;
+	color: #66FF00;
+    font-size: 20px !important;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+    background-color: black;
+}
+.lineMath{
+	opacity: 0;
+	color: #660000;
+	font-size: 20px !important;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+    background-color: white;
+}
+.sub-meteor{
+    color: #00FFFF;
+}
+ @media (max-width: 500px) {
+    .meteor_heading{
+    	font-size: 30px !important;
+    }
+    .sub-meteor{
+    	font-size: 18px !important; 
+    }
+}

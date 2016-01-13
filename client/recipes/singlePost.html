@@ -1,0 +1,23 @@
+<template name="singlePost">
+
+  <div class="container">
+
+    <a class="btn btn-primary" href="/recipes"> Обратно към рецепти this</a>
+    <div class="row">
+        <div class="col-md-12">
+            <center><h2>{{post.title}}</h2></center><br>
+            {{#if post.featuredImage}}
+
+              <img src="/{{post.featuredImageName}}"/>
+
+            {{/if}}
+            <p>
+              {{post.excerpt}}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+</template>

@@ -163,6 +163,10 @@ h3 {
 
 }
 
+.css-meteor-blogpost{
+  font-family: 'Exo 2', sans-serif;
+}
+
  @media (max-width: 500px) {
     .meteor_heading{
     	font-size: 30px !important;

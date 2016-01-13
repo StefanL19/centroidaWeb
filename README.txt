@@ -1,1 +1,1 @@
-This a project for a company website.
+This is the project for my blog. It is created with meteor and the blog package. Here you could find examples of how to use the blog package according to your needs.

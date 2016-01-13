@@ -1,10 +1,5 @@
 Meteor.methods({
 
-	addPhoto:function(photo){
-		console.log('add photo method');
-		return Photos.insert(photo);
-	},
-
 
 	//this is the method for sending the email
 	sendEmail: function (to, from, subject, text) {

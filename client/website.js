@@ -1,6 +1,5 @@
-//subscriptions
-Meteor.subscribe("recipes");
-Meteor.subscribe("products");
+
+
 
 
 

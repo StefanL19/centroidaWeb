@@ -4,7 +4,9 @@
      <hr/>
      {{#each current_theme}}
      <div class="row">
-        <a href="#" class="linkMeteorPost"><center><h2 class="css-meteor-blogpost js-meteor-blogpost">{{title}}</h2></center></a>
+        <a href="/blog/{{slug}}" class="linkMeteorPost">
+            <center><h2 class="css-meteor-blogpost js-meteor-blogpost">{{title}}</h2></center>
+        </a>
      </div>
      {{/each}}
      <div class="odd">

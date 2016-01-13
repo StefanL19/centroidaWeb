@@ -176,6 +176,10 @@ h3 {
   font-size: 20px !important;
 }
 
+.commentable-section{
+  font-size: 20px !important;
+}
+
  @media (max-width: 500px) {
     .meteor_heading{
     	font-size: 30px !important;

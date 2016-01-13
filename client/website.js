@@ -12,14 +12,6 @@ Template.meteorpost.helpers({
 
 });
 
-Template.meteorpost.events({
-  'click .js-meteor-blogpost':function(event){
-    var p = this.slug;
-    $(".linkMeteorPost").attr("href", "/blog/"+p);
-      
-  }
-})
-
 
 
 Template.singlePost.helpers({
@@ -181,3 +173,15 @@ Template.jumbotron.events({
   }
 
 })
+
+//HELPERS AND EVENTS FOR THE EDUCATION POSTS
+
+
+Template.education.helpers({
+
+  "current_theme":function(){
+        console.log(Blog.Post.find({description:"education"}).fetch({}));
+        return Blog.Post.find({description:"education"});
+  }
+
+});

@@ -1,0 +1,52 @@
+<template name="myShowBlogTemplate">
+	{{>navbar}}
+  <div class="meteor-blog-single">
+    {{#with post}}
+      {{#if featuredImage}}
+        {{> myBlogShowFeaturedImage}}
+      {{/if}}
+    {{/with}}
+    {{#if blogReady}}
+      {{#with post}}
+        {{> myBlogShowBody}}
+      {{else}}
+        {{> Template.dynamic template=notFound}}
+      {{/with}}
+    {{else}}
+      {{> blogLoading}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="myBlogShowBody">
+	<div class="container">
+	<div class="row">
+  <div class="meteor-blog-post">
+    <div class="meteor-blog-post-main">
+      {{#unless titleBackground}}
+        <h1 class="meteor-blog-post-title text-center">
+          {{title}}
+        </h1>
+        <div class="meteor-blog-post-meta text-center">
+          {{#if isAdmin}}
+             <small><a href="#" data-action="edit-post">{{ BlogLanguage.edit }}</a></small>
+             --
+          {{/if}}
+          {{ BlogLanguage.metaAuthorBy }} {{authorName}} {{ BlogLanguage.metaAuthorOn }} {{blogFormatDate publishedAt}}
+          {{> blogTags }}
+        </div>
+      {{/unless}}
+      <div id="commentable-area bodyPost">
+        {{{html}}}
+      </div>
+    </div>
+    {{> shareit shareData}}
+    {{> disqus this}}
+  </div>
+  </div>
+  </div>
+</template>
+
+<template name="myBlogShowFeaturedImage">
+  <img src="{{featuredImage}}" alt="" class="img-responsive center-block imagePost img-thumbnail">
+</template>

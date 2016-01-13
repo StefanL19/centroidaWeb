@@ -80,8 +80,16 @@ body {
 	color: white;
 }
 
-.navbar-nav{
-	
+.navbar-nav>li>a{
+  font-family: 'Exo 2', sans-serif !important;
+	font-size: 15px !important;
+  color: white !important;
+}
+
+.navbar-nav>li>a:hover {
+    color: #00FF00 !important;
+    border-bottom: 2px solid #ad1f2d!important;
+    text-decoration: none; 
 }
 
 .meteor-blog-latest-heading{
@@ -98,10 +106,6 @@ ul, li{
 	height: 80px;
 }
 
-.navbar-nav>li>a:hover {
-    border-bottom: 2px solid #ad1f2d!important;
-    text-decoration: none; 
-}
 
 .css-logo-image:hover{
 	opacity:0.8;
@@ -152,6 +156,13 @@ h3 {
 .sub-meteor{
     color: #00FFFF;
 }
+
+.navbar-default{
+  background-color: black !important;
+  color: green;
+
+}
+
  @media (max-width: 500px) {
     .meteor_heading{
     	font-size: 30px !important;

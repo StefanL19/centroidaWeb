@@ -187,6 +187,7 @@ Template.jumbotron.events({
     });
 
       $(".lineMath").velocity({ opacity: 1 }, { duration: 1000 });//velocity line mathematics
+      $(".js-sub-math").velocity({ opacity: 0 });
     }
     else{
       return;
@@ -211,6 +212,7 @@ Template.jumbotron.events({
 
     });
        $(".lineMath").velocity({ opacity: 0 }, { duration: 1000 });//velocity line mathematics
+       $(".js-sub-math").velocity({ opacity: 1 });
 
     }
     else{
